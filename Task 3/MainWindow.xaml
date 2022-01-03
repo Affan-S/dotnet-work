@@ -1,0 +1,80 @@
+﻿<Window x:Class="Task_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:asasda"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid HorizontalAlignment="Left" Width="800" RenderTransformOrigin="0.494,0.761">
+        <TabControl Grid.Row="1" Background="LightBlue">
+            <TabItem Header="Expenses">
+                <Canvas>
+                    <Label x:Name="labelIncome" Content="Enter Income" HorizontalAlignment="Left" Margin="20,46,0,0" VerticalAlignment="Top" Width="103" Height="26"/>
+                    <TextBox x:Name="incomeTxt" HorizontalAlignment="Left" Margin="20,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="21" TextChanged="incomeTxt_TextChanged"/>
+                    <Label x:Name="labelTaxDeduction" Content="Income tax Deduction" HorizontalAlignment="Left" Margin="20,109,0,0" VerticalAlignment="Top" Height="26" Width="126"/>
+                    <TextBox x:Name="incometax" HorizontalAlignment="Left" Margin="20,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="grocery" Content="Enter Grocery Expense" HorizontalAlignment="Left" Margin="20,172,0,0" VerticalAlignment="Top" Height="26" Width="128"/>
+                    <TextBox x:Name="grocerytxt" HorizontalAlignment="Left" Margin="20,221,0,0" TextWrapping="Wrap" Width="120" Height="18" VerticalAlignment="Top"/>
+                    <Label x:Name="waterLight" Content="Water and Light Expenses" Margin="20,254,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.144,0.501" HorizontalAlignment="Left" Width="146" Height="26"/>
+                    <TextBox x:Name="lightandwatertxt" HorizontalAlignment="Left" Margin="20,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="travel" Content="Travel Expenses" HorizontalAlignment="Left" Margin="26,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.118,-1.382" Height="26" Width="92"/>
+                    <TextBox x:Name="traveltxt" HorizontalAlignment="Left" Margin="20,373,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="phone" Content="Cell Phone and Telephone Expenses" HorizontalAlignment="Left" Margin="20,398,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.223,-1.326" Height="26" Width="200"/>
+                    <TextBox x:Name="cellphonetxt" HorizontalAlignment="Left" Margin="20,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="other" Content="Other Expenses" HorizontalAlignment="Left" Margin="20,483,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.118,-2.666" Height="26" Width="92"/>
+                    <TextBox x:Name="othertxt" HorizontalAlignment="Left" Margin="20,530,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <RadioButton x:Name="rentProperty" GroupName="RentorBuy" Content="Rent Property" HorizontalAlignment="Left" Margin="225,25,0,0" VerticalAlignment="Top" ClickMode="Release" FontSize="14" Checked="rentProperty_Checked"/>
+                    <RadioButton x:Name="buyProperty" GroupName="RentorBuy" Content="Buy Property" HorizontalAlignment="Left" Margin="341,25,0,0" VerticalAlignment="Top" ClickMode="Press" FontSize="14" Checked="buyProperty_Checked"/>
+                    <Label x:Name="propertyPrice" Content="Choose from Above radio button" HorizontalAlignment="Left" Margin="234,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.621,15.625" Height="26" Width="216"/>
+                    <TextBox x:Name="propertyPricetxt" HorizontalAlignment="Left" Margin="233,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                    <Label x:Name="depositLabel" Content="Enter Deposit Amount" HorizontalAlignment="Left" Margin="234,109,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="depositAmountTxt" HorizontalAlignment="Left" Margin="234,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+                    <Label x:Name="interestRate" Content="Enter Interest Rate" HorizontalAlignment="Left" Margin="234,172,0,0" VerticalAlignment="Top" Height="24"/>
+                    <TextBox x:Name="interestRateTxt" HorizontalAlignment="Left" Margin="233,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+                    <Label x:Name="monthsLabel" Content="Enter Numer of Months (240 - 360) for Repaying loan" HorizontalAlignment="Left" Margin="233,256,0,0" VerticalAlignment="Top" Height="36" Width="294"/>
+                    <TextBox x:Name="propertyMonthstxt" HorizontalAlignment="Left" Margin="234,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <RadioButton x:Name="buyCar" Content="Buy Car" HorizontalAlignment="Left" Margin="543,21,0,0" VerticalAlignment="Top" FontSize="14" ClickMode="Press" Checked="buyCar_Checked" Width="75"/>
+                    <RadioButton x:Name="noCarButton" Content="No Car" HorizontalAlignment="Left" Margin="646,21,0,0" VerticalAlignment="Top" FontSize="14" Checked="noCarButton_Checked" Width="70"/>
+                    <Label x:Name="carModel" Content="Car Make and Model" HorizontalAlignment="Left" Margin="543,46,0,0" VerticalAlignment="Top" Width="136"/>
+                    <TextBox x:Name="carmodeltxt" HorizontalAlignment="Left" Margin="545,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
+                    <Label x:Name="carPriceLabel" Content="Car Price" HorizontalAlignment="Left" Margin="543,103,0,0" VerticalAlignment="Top" Width="64"/>
+                    <TextBox x:Name="carPricetxt1" HorizontalAlignment="Left" Margin="544,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+                    <Label x:Name="depositcar" Content="Deposit Amount" HorizontalAlignment="Left" Margin="545,172,0,0" VerticalAlignment="Top" Width="109"/>
+                    <TextBox x:Name="depositCartxt" HorizontalAlignment="Left" Margin="545,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+                    <Label x:Name="interesteratelbl" Content="Interest rate" HorizontalAlignment="Left" Margin="545,261,0,0" VerticalAlignment="Top" Width="83"/>
+                    <TextBox x:Name="carInteresteRatetxt" HorizontalAlignment="Left" Margin="545,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" RenderTransformOrigin="0.5,0.5"></TextBox>
+                    <Label x:Name="insurancelbl" Content="Premium Insurance amount" HorizontalAlignment="Left" Margin="544,310,0,0" VerticalAlignment="Top" Width="176"/>
+                    <TextBox x:Name="insuranceAmounttxt" HorizontalAlignment="Left" Margin="544,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+
+                    <TextBlock x:Name="OutputBlock" HorizontalAlignment="Left" Margin="225,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="174" Width="337"/>
+                    <Button Content="Calculate My Expenses" HorizontalAlignment="Left" Margin="603,488,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.39,0.374" Height="38" Width="123" Click="Button_Click">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.124"/>
+                                <TranslateTransform X="-0.029" Y="0.028"/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                    </Button>
+                </Canvas>
+            </TabItem>
+            <TabItem Header="Saving">
+                <Canvas>
+                    <Label x:Name="purposeLbl" Content="Saving For" HorizontalAlignment="Left" Margin="20,40,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="purposetxt" HorizontalAlignment="Left" Margin="20,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="amountlbl" Content="Total Saving Amount" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="savingAmounttxt" HorizontalAlignment="Left" Margin="20,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="timelbl" Content="Time Period (in years)" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="timetxt" HorizontalAlignment="Left" Margin="20,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="interestLbl" Content="Monthly Interest rate" HorizontalAlignment="Left" Margin="20,240,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="interestRatetxt" HorizontalAlignment="Left" Margin="20,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="calculateSaving" Content="Calculate Monthly Savings" HorizontalAlignment="Left" Margin="20,300,0,0" VerticalAlignment="Top" Width="121" Height="43" Click="Button_Click_1"/>
+                    <TextBlock x:Name="savingBlock" HorizontalAlignment="Left" Margin="400,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="357"/>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
